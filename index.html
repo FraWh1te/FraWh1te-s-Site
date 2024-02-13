@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Impostazioni per il body */
+    body {
+      background-color: #3a4042;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Impostazioni per l'immagine in alto */
+    .header {
+      background-image: url('Image.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 400px;
+      position: relative;
+    }
+
+    /* Impostazioni per il contenuto */
+    .content {
+      background-color: #3a4042;
+      padding: 20px;
+    }
+
+    /* Impostazioni per la barra di navigazione */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    li a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: rgb(255, 255, 255);
+      transition: width 0.3s ease-in-out;
+    }
+
+    li a:hover:before {
+      width: 100%;
+    }
+
+    .active a:before {
+      width: 100%;
+    }
+
+    li:not(:last-child) a {
+      margin-right: 20px;
+    }
+
+     /* Impostazioni per l'immagine a destra del box */
+     .image-right {
+      float: right; /* Posiziona l'immagine a destra */
+      margin-left: 20px; /* Aggiunge spazio tra l'immagine e il box */
+      max-width: 200px; /* Larghezza massima per l'immagine */
+      border-radius: 10px;
+    }
+
+
+    /* Impostazioni per l'immagine a sinistra del box */
+    .image-right {
+      float: right; /* Posiziona l'immagine a sinistra */
+      margin-left: 20px; /* Aggiunge spazio tra l'immagine e il box */
+      max-width: 200px; /* Larghezza massima per l'immagine */
+      border-radius: 10px;
+    }
+
+
+
+    /* Impostazioni per l'allineamento degli oggetti */
+    .pos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    /* Impostazioni per la barra di navigazione sticky */
+    .NavBar1.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    /* Impostazioni per il bottone */
+    .button {
+      background-color: #617a72;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .button1 {
+      background-color: #13120f;
+      color: white;
+      border: 2px solid #617a72;
+    }
+
+    .button1:hover {
+      background-color: #617a72;
+      color: white;
+    }
+
+    /* Impostazioni per la scatola "About Me" */
+     /* Impostazioni per la box */
+     .box {
+      width: 300px;
+      padding: 20px;
+      background-color: #474242;
+      border-radius: 20px;
+      border: 2px solid #474242;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: left; /* Sposta la scatola a sinistra */
+    }
+
+    .box h1 {
+      font-size: 24px;
+      color: #e0d2d2;
+    }
+
+    .box p {
+      font-size: 16px;
+      color: #e0d2d2;
+    }
+
+  
+    .pos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar IOI -->
+  <div class="header" style="margin-bottom: 100px; height: 600px;">
+    <div class="NavBar1">
+      <ul style="margin-top: 10px;">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="codes.html">Codes</a></li>
+        <li><a href="Contattaci.html">Contattaci</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+      </ul>
+
+    
+
+    </div>
+      <!-- Contenitore per immagine e bottone -->
+      <img src="Logo.png" alt="" style="width: 450px; margin-top: 0px;">
+      <!-- Scroll Button -->
+      <center>
+      <button id="scrollButton" class="button button1" style="font-family: Cascadia Mono ; margin-top: 10px;">Read More</button>
+    </center>
+  </div>
+  <div class="content">
+    <!-- Utilizzo di un contenitore per posizionare la box e l'immagine sulla stessa riga -->
+    <div class="pos">
+
+      <img src="study.jpeg" alt="" class="image-right">
+      <!-- Scatola "About Me" -->
+
+      <div class="box">
+        <h1>About me</h1>
+        <p>I am a 15-year-old student in high school.<br>I study at the Copernico high school in Udine.<br>I am working on the platform Fiverr. <br> I am trying to achieve the best form of me.
+          <br> I'm working on improving myself.</p>
+      </div>
+      <!-- Immagine "study.jpeg" -->
+      
+    </div>
+  </div>
+
+
+  <div class="content">
+    <!-- Utilizzo di un contenitore per posizionare la box e l'immagine sulla stessa riga -->
+    <div class="pos" style="margin-top: 50px;">
+
+      <!-- Scatola "Experiences" -->
+      <div class="box">
+        <h1>Experiences</h1>
+        <p>My experiences in programming are vast. <br>
+          I'm trying to learn more and more.<br>
+          I have experience in languages such as C, C++, C# and others,  and I can also use Blender and Unity well.</p>
+      </div>
+      <!-- Immagine "study.jpeg" -->
+      <img src="Experience.png" alt="" class="image-right">
+    </div>
+  </div>
+  <!-- Script Sticky Bar, se non vuoi vedere la barra togli tutto -->
+  <script>
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    var navbar = document.querySelector(".NavBar1");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+  <!-- Script per animazione bottone che scrolla in basso -->
+  <script>
+    document.getElementById("scrollButton").addEventListener("click", function() {
+      animateScroll(600, 1000);
+    });
+
+    function animateScroll(scrollTo, duration) {
+      const start = window.pageYOffset;
+      const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+      function scroll() {
+        const currentTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+        const timeElapsed = currentTime - startTime;
+        const scrollPosition = easeInOutQuad(timeElapsed, start, scrollTo - start, duration);
+        window.scrollTo(0, scrollPosition);
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scroll);
+        }
+      }
+
+      function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      scroll();
+    }
+  </script>
+  <!-- HR finale -->
+  <hr style="margin-top: 10000px;">
+</body>
+</html>
